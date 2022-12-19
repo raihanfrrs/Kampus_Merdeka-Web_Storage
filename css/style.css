@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  background-color: #FFFFFF;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+}
+
+nav {
+   background-color: #FFFFFF;
+   padding: 5px;
+   top: 0;
+   box-shadow: 1px 5px 5px #aaaaaa;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+   font-weight: bold;
+}
+
+nav ul.navbar-content{
+  text-align: left;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 40px;
+}
+
+header {
+   display: inline;
+}
+
+.card {
+   background-color: white;
+   color: black;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   padding: 20px;
+   margin-top: 20px;
+}
+ 
+.jumbotron {
+  padding: 30px;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: row;
+
+  /* properti lainnya */
+  width: 0 auto;
+  height: 0 auto;
+  padding: 20px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+
+  /* properti lainnya */
+  padding: 20px;
+  margin: 5px;
+}
+
+.form {
+    width: 100% auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: white;
+    outline: none;
+}
+
+input[type=submit], input[type=reset] {
+    padding: 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+    background-color: white;
+    font-weight: bold;
+}
+
+input[type=text]:focus {
+    background-color:  #ebebeb;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: black;
+    color: white;
+} 
+
+.box {
+  flex-grow: 1;
+
+  /* properti lainnya */
+  margin: 5px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+tbody tr:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+/* element pendukung text untuk memudahkan pemanggilan agar sat set wat wet*/
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-white {
+  color: white;
+}
+/* penutup text align */
+
+.check-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/check-square.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('../assets/check-square-fill.svg');
+    background-size: contain;
+}
+
+.trash-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/trash.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('../assets/trash-fill.svg');
+    background-size: contain;
+}
+
+.undo-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../assets/arrow-up-square.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('../assets/arrow-up-square-fill.svg');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+}
+ 
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px */
+@media screen and (max-width: 600px) {
+  .flex-column {
+    flex-direction: column;
+    padding: 0px;
+  }
+}
+
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 420px */
+@media screen and (max-width: 420px) {
+  nav ul.navbar-content{
+    text-align: center;
+  }
+
+  nav li{
+    margin: 0;
+  }
+}
